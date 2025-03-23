@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Plantation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            text-align: center;
+            overflow: hidden;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .card {
+            margin: 20px auto;
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+        .card h2 {
+            margin: 10px 0;
+        }
+        .card p {
+            margin: 0 20px 20px;
+            color: #555;
+        }
+        .team {
+            margin: 30px auto;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: white;
+            background: linear-gradient(120deg, #8BC34A, #4CAF50);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+        .team span {
+            display: inline-block;
+            padding: 5px 10px;
+            background: white;
+            color: #4CAF50;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, #4CAF50, #8BC34A, #AED581);
+            background-size: 300% 300%;
+            animation: moveBackground 10s infinite alternate;
+            z-index: -1;
+        }
+        @keyframes moveBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+    <h1>Tree Plantation</h1>
+</header>
+
+<div class="card">
+    <img src="https://r1.ilikewallpaper.net/ipad-pro-wallpapers/download/99475/cherry-blossoms-trees-4k-ipad-pro-wallpaper-ilikewallpaper_com.jpg"width="auto"height="auto">
+    <h2>Peace Lily</h2>
+    <p>The Peace Lily is admired for its elegant white flowers and air-purifying qualities. Perfect for enhancing the serenity of any space.</p>
+</div>
+
+<div class="team">
+    Team Members: <span>HARSH </span> <span>ATHARVA </span> <span>SUSHANT </span>
+</div>
+
+</body>
+</html>
