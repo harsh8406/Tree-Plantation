@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Tree Plantation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -9,12 +10,13 @@
             padding: 0;
             background-color: #f3f4f6;
             text-align: center;
-            overflow: hidden;
+            /* allow scrolling */
+            overflow-x: hidden;
         }
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 20px 0;
+            padding: 20px 10px;
         }
         header h1 {
             margin: 0;
@@ -22,7 +24,8 @@
         }
         .card {
             margin: 20px auto;
-            width: 400px;
+            width: 90%;              /* responsive */
+            max-width: 500px;        /* for big screens */
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -32,6 +35,7 @@
         .card img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
         .card h2 {
             margin: 10px 0;
@@ -45,12 +49,12 @@
         .team {
             margin: 30px auto;
             padding: 20px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: white;
             background: linear-gradient(120deg, #8BC34A, #4CAF50);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
+            width: 90%;
             max-width: 600px;
         }
         .team span {
@@ -61,6 +65,7 @@
             border-radius: 5px;
             margin: 5px;
             font-weight: bold;
+            font-size: 0.9rem;
         }
         /* Animated Background */
         .background {
@@ -75,11 +80,20 @@
             z-index: -1;
         }
         @keyframes moveBackground {
-            0% {
-                background-position: 0% 50%;
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        /* Small screens adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5rem;
             }
-            100% {
-                background-position: 100% 50%;
+            .card p {
+                font-size: 0.9rem;
+            }
+            .team {
+                font-size: 1rem;
+                padding: 15px;
             }
         }
     </style>
@@ -93,7 +107,7 @@
 </header>
 
 <div class="card">
-    <img src="https://i.pinimg.com/originals/05/d9/f0/05d9f0b581c93d3e8b478d8ffc88ab07.jpg" width="auto" height="auto">
+    <img src="https://i.pinimg.com/originals/05/d9/f0/05d9f0b581c93d3e8b478d8ffc88ab07.jpg" alt="Red Rose">
     <h2>RED ROSE</h2>
     <p>
         🌹 <strong>Natural Air Purifiers</strong><br>
@@ -118,7 +132,10 @@
 </div>
 
 <div class="team">
-    Team Members: <span>HARSH GAIKWAD</span> <span>ATHARVA MHATRE</span> <span>SUSHANT KUSHWAHA</span>
+    Team Members: 
+    <span>HARSH GAIKWAD</span> 
+    <span>ATHARVA MHATRE</span> 
+    <span>SUSHANT KUSHWAHA</span>
 </div>
 
 </body>
