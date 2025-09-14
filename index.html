@@ -10,9 +10,10 @@
             padding: 0;
             background-color: #f3f4f6;
             text-align: center;
-            /* allow scrolling */
             overflow-x: hidden;
         }
+
+        /* Header */
         header {
             background-color: #4CAF50;
             color: white;
@@ -20,15 +21,18 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem); /* responsive font */
+            letter-spacing: 1px;
         }
+
+        /* Card */
         .card {
-            margin: 20px auto;
-            width: 90%;              /* responsive */
-            max-width: 500px;        /* for big screens */
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;  /* good width for laptops */
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             text-align: center;
         }
@@ -38,36 +42,42 @@
             display: block;
         }
         .card h2 {
-            margin: 10px 0;
+            margin: 15px 0 10px;
+            font-size: 1.6rem;
+            color: #333;
         }
         .card p {
-            margin: 10px 20px;
-            color: #555;
-            line-height: 1.6;
+            margin: 12px 20px;
+            color: #444;
+            line-height: 1.7;
+            font-size: 1rem;
             text-align: justify;
         }
+
+        /* Team box */
         .team {
-            margin: 30px auto;
+            margin: 40px auto;
             padding: 20px;
             font-size: 1.2rem;
             color: white;
             background: linear-gradient(120deg, #8BC34A, #4CAF50);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
             width: 90%;
-            max-width: 600px;
+            max-width: 700px;
         }
         .team span {
             display: inline-block;
-            padding: 5px 10px;
+            padding: 6px 12px;
             background: white;
             color: #4CAF50;
-            border-radius: 5px;
-            margin: 5px;
+            border-radius: 6px;
+            margin: 6px;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
-        /* Animated Background */
+
+        /* Animated background */
         .background {
             position: fixed;
             top: 0;
@@ -83,17 +93,21 @@
             0% { background-position: 0% 50%; }
             100% { background-position: 100% 50%; }
         }
-        /* Small screens adjustments */
+
+        /* Small screens */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
             .card p {
                 font-size: 0.9rem;
+                line-height: 1.5;
             }
             .team {
                 font-size: 1rem;
                 padding: 15px;
+            }
+            .team span {
+                display: block;  /* stack vertically */
+                width: fit-content;
+                margin: 8px auto;
             }
         }
     </style>
